@@ -22,9 +22,6 @@ By the end of this, developers should be able to:
     this repository.
 1.  Create a new branch, `training`, for your work.
 1.  Install dependencies with `npm install`.
-1.  [Install](https://github.com/ga-wdi-boston/express-api-template#installation)
-    `express-api-template` into your training directory.  In step 2 rename
-    `express-api-template` to `express-multer-api`.
 
 ## Introduction
 
@@ -33,6 +30,9 @@ Adding a feature to a web API can feel formidable.
 We'll take a stepped approach to implementing an image upload feature.
 
 Hard problems are hard.  We'll work to find and solve an easier problem first.
+
+The feature we're going to build is uploading a file. This repo is part of the
+`browser-upload` sequence. We'll eventually use [upload-client](https://github.com/ga-wdi-boston/upload-client), in association with [express-api-upload](https://github.com/ga-wdi-boston/express-api-upload) to build out the full feature, but let's start simple, and practice going slow to go fast.
 
 ## Discussion
 
@@ -52,7 +52,7 @@ We'll use the following node modules as we build out this feature:
 -   [ ] `body-parser`
 -   [ ] `multer`
 
-The node package `file-type` night be more appropriate for getting a content
+The node package `file-type` might be more appropriate for getting a content
 type, but `mime` is sufficient for the command line portion of our feature
 build.  When we start handling uploads through `multer`, we'll see that we get
 file information from it.
@@ -89,7 +89,7 @@ We'll use the form attribute `enctype="multipart/form-data"` to allow uploading
 We'll use `FormData` and `$.ajax` to POST data to an echo server,
  `http://httpbin.org`.
 
-Later we'll use this client to POST data to `express-multer-api`.
+Later we'll use this client to POST data to `express-upload-api`.
 
 ## Uploading files to AWS via multer and express
 
